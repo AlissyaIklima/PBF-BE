@@ -1,12 +1,16 @@
 <?php
+
 namespace App\Models;
+
 use CodeIgniter\Model;
 
 class UserModel extends Model
 {
-    protected $table = "user";
-    protected $primaryKey = "id_user";
-    protected $useAutoIncrement = true;
+    protected $table      = 'users';
+    protected $primaryKey = 'id';
 
-    protected $allowedFields = ["username", "password", "level"];
+    // protected $allowedFields = ['email', 'password', 'name']; // Add other fields as needed
+
+    protected $useTimestamps = true;
+    protected $allowedFields = ['username','email', 'password'];
 }

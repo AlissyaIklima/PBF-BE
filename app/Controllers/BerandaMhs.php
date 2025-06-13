@@ -2,8 +2,9 @@
 
 namespace App\Controllers;
 
-use CodeIgniter\API\ResponseTrait;
+use CodeIgniter\RESTful\ResponseTrait;
 use App\Models\ViewBerandaMhs;
+use App\Controllers\BaseController;
 
 class BerandaMhs extends BaseController
 {

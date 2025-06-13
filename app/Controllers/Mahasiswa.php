@@ -6,7 +6,7 @@ use App\Models\UserModel;
 use App\Models\DosenModel;
 use App\Models\KajurModel;
 use App\Models\MahasiswaModel;
-use CodeIgniter\API\ResponseTrait;
+use CodeIgniter\RESTful\BaseController;;
 
 // Menambahkan Header CORS Global
 header("Access-Control-Allow-Origin: *");
@@ -17,11 +17,7 @@ header(
 
 class Mahasiswa extends BaseController
 {
-    use ResponseTrait;
-    protected $userModel;
-    protected $mahasiswaModel;
-    protected $dosenModel;
-    protected $kajurModel;
+    protected $userModel = 'App\Models\UserModel';
 
     public function __construct()
     {
